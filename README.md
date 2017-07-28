@@ -35,3 +35,8 @@ Open your Docker Quick start terminal and get into the project folder.
 Checkout the the working project branch
 
 ``git checkout EHCMS-1424-MASTER``
+
+Branch out from ``EHCMS-1424-MASTER``
+
+``git checkout -b EHCMS-1424-CHIOLD-task-description``
+
