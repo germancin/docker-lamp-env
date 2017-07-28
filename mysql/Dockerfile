@@ -7,5 +7,5 @@ RUN apt-get -qq update && \
     mkdir -p /var/database/ && \
     chmod -R 777 /var/database/
 
-#comment
+#Ready to run mysql commands
 WORKDIR /var/database/
