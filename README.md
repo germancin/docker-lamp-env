@@ -38,7 +38,7 @@ Checkout the the working project branch
 
 Branch out from ``EHCMS-1424-MASTER``
 
-``git checkout -b EHCMS-1424-CHILD-task-description``
+``git checkout -b EHCMS-1424-CHILD-task-description EHCMS-1424-MASTER``
 
 Done!! You can start pushing code ;) 
 
