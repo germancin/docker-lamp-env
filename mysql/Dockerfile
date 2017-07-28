@@ -7,4 +7,5 @@ RUN apt-get -qq update && \
     mkdir -p /var/database/ && \
     chmod -R 777 /var/database/
 
+#comment
 WORKDIR /var/database/
