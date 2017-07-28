@@ -40,3 +40,5 @@ Branch out from ``EHCMS-1424-MASTER``
 
 ``git checkout -b EHCMS-1424-CHILD-task-description``
 
+Done!! You can start pushing code ;) 
+
