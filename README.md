@@ -17,7 +17,7 @@ This will build the containers.
 ### Database setup.
 Copy ``wfm-db.sql`` file into ``/wfm-dev-env/mysql/database/``
 
-Get ``wfm-db.sql`` from shared folder ``/Open/wfm-assets/``
+Get ``wfm-db.sql`` from shared folder ``/Open/GermanG/wfm-assets/``
 
 Open kitematic and get into ``mysql-container`` shell 
 
