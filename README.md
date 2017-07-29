@@ -27,7 +27,7 @@ Now run command ``ls`` to list all files and you should see ``wfm-db.sql``
 
 ``mysql> source wfm-db.sql ``
 
-### Git Working Branch.
+### Git Project Branch.
 Open your Docker Quick start terminal and get into the project folder.
 
 ``cd /wfm-dev-env/Yellow-TimeandLabor/``
