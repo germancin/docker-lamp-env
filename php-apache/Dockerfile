@@ -1,6 +1,7 @@
 FROM php:7.1-apache
 
 RUN apt-get -qq update && \
+    apt-get update && \
     apt-get install  -y \
     tree \
     vim \
@@ -8,17 +9,14 @@ RUN apt-get -qq update && \
     libjpeg62-turbo-dev \
     libmcrypt-dev \
     libpng12-dev \
+    libpq-dev \
     && docker-php-ext-install -j$(nproc) iconv mcrypt \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install -j$(nproc) gd && \
+    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-install pdo pdo_pgsql
 
 RUN yes | pecl install xdebug-2.5.0 \
     && docker-php-ext-enable xdebug \
-    && echo "xdebug.remote_enable=on\n" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.remote_autostart=on\n" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.remote_handler=dbgp\n" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.remote_port=9000\n" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.remote_connect_back=1\n" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     && docker-php-ext-install mysqli \
     && docker-php-ext-install pdo_mysql
 

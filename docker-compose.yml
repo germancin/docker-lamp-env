@@ -30,6 +30,7 @@ app-data:
     volumes:
         - ./Yellow-TimeandLabor/:/websites/time/
         - ./php-apache/wfm.conf:/etc/apache2/sites-available/wfm.conf
+        - ./php-apache/php.ini:/usr/local/etc/php/conf.d/php.ini
     command: "true"
 
 mysql-data:
@@ -37,7 +38,6 @@ mysql-data:
     container_name: mysql_data
     volumes:
         - /var/lib/mysql
-        - /websites/time/www/phpmyadmin/config.inc.php
         - ./mysql/database/:/var/database/
     environment:
         MYSQL_ROOT_PASSWORD: password
